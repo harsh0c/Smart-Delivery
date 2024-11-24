@@ -1,0 +1,70 @@
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    color: #1e88e5;
+    margin-bottom: 20px;
+  }
+  
+  .metrics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .metric-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .metric-card h3 {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .metric-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e88e5;
+  }
+  
+  .section-title {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .assignments-table th,
+  .assignments-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .assignments-table th {
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .assignments-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .assignments-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

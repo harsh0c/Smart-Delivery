@@ -1,0 +1,50 @@
+.assignments-container {
+    padding: 20px;
+  }
+  
+  .assignments-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .metrics,
+  .partner-overview,
+  .active-assignments {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .assignments-table th,
+  .assignments-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .assignments-table th {
+    background-color: #f4f4f4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .assignments-container {
+      padding: 10px;
+    }
+  
+    .assignments-table {
+      font-size: 12px;
+    }
+  
+    .assignments-table th,
+    .assignments-table td {
+      padding: 6px;
+    }
+  }
+  

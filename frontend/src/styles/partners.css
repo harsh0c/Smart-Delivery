@@ -1,0 +1,58 @@
+.partners-container {
+    padding: 20px;
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .form-container input {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px;
+  }
+  
+  .form-container button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .partners-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .partners-table th, .partners-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .partners-table th {
+    background-color: #f4f4f4;
+  }
+  
+  @media (max-width: 768px) {
+    .partners-table th, .partners-table td {
+      font-size: 12px;
+    }
+  
+    .form-container {
+      flex-direction: column;
+    }
+  
+    .form-container input, .form-container button {
+      width: 100%;
+    }
+  }
+  
