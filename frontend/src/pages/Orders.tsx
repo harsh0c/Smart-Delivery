@@ -39,6 +39,11 @@ const Orders: React.FC = () => {
   };
 
   const applyFilters = () => {
+    if (!Array.isArray(orders)) {
+      console.error('Orders data is not an array:', orders);
+      return [];
+    }
+    
     return orders.filter((order) => {
         const formattedOrderDate = new Date(order.createdAt).toISOString().split('T')[0];
         console.log(formattedOrderDate)
