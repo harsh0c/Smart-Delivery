@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Assignment2, Metrics2, PartnerOverview } from '../types/index';
 import Layout from './Layout';
 import '../styles/assignments.css';
-import { fetchAssignments } from '../services/api';
+import { fetchAssignments, fetchAssignmentsMetrics } from '../services/api';
 
 const Assignments: React.FC = () => {
   const [assignments, setAssignments] = useState<Assignment2[]>([]);
@@ -21,8 +21,8 @@ const Assignments: React.FC = () => {
         setAssignments(assignmentsResponse);
 
         // Fetch metrics
-        const metricsResponse = await axios.get('/api/assignments/metrics');
-        setMetrics(metricsResponse.data);
+        const metricsResponse = await fetchAssignmentsMetrics();
+        setMetrics(metricsResponse);
 
         // Fetch partner overview
         const partnersResponse = await axios.get('/api/assignments/partners/overview');
