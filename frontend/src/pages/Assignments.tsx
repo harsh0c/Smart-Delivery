@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Assignment2, Metrics2, PartnerOverview } from '../types/index';
 import Layout from './Layout';
 import '../styles/assignments.css';
+import { fetchAssignments } from '../services/api';
 
 const Assignments: React.FC = () => {
   const [assignments, setAssignments] = useState<Assignment2[]>([]);
@@ -11,13 +12,13 @@ const Assignments: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchAssignments = async () => {
+    const fetchAssign = async () => {
       try {
         setLoading(true);
 
         // Fetch assignments
-        const assignmentsResponse = await axios.get('/api/assignments');
-        setAssignments(assignmentsResponse.data);
+        const assignmentsResponse = await fetchAssignments();
+        setAssignments(assignmentsResponse);
 
         // Fetch metrics
         const metricsResponse = await axios.get('/api/assignments/metrics');
@@ -33,7 +34,7 @@ const Assignments: React.FC = () => {
       }
     };
 
-    fetchAssignments();
+    fetchAssign();
   }, []);
 
   if (loading) {

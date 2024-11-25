@@ -22,4 +22,9 @@ export const fetchAssignmentsMetrics = async () => {
   return response.data;
 };
 
+export const fetchAssignments = async () => {
+  const response = await api.get('/api/assignments');
+  return response.data;
+};
+
 export default api;

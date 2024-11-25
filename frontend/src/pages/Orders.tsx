@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Order } from '../types';
 import Layout from './Layout';
 import '../styles/orders.css';
+import { fetchOrders } from '../services/api';
 
 const Orders: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -14,11 +15,11 @@ const Orders: React.FC = () => {
   });
 
   useEffect(() => {
-    const fetchOrders = async () => {
+    const fetchOrde = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('/api/orders');
-        setOrders(response.data);
+        const response = await fetchOrders();
+        setOrders(response);
       } catch (error) {
         console.error('Error fetching orders:', error);
       } finally {
@@ -26,7 +27,7 @@ const Orders: React.FC = () => {
       }
     };
 
-    fetchOrders();
+    fetchOrde();
   }, []);
 
   const handleStatusUpdate = async (id: string, newStatus: string) => {
